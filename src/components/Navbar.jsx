@@ -3,8 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { Avatar, Menu, MenuItem } from "@mui/material";
 import "./Navbar.css";
 import { UserContext } from "../App.jsx";
+import Logo from '../assets/TTLogo.png';
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [active, setactive] = useState("Dashboard");
   const open = Boolean(anchorEl);
   const navigate = useNavigate();
   const handleClick = (event) => {
@@ -22,15 +24,23 @@ function Navbar() {
   const { username } = useContext(UserContext);
   console.log(username);
 
+  const handleActive = (value) => {
+    if (value === active) {
+      return;
+    }
+    setactive(value);
+  }
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/">Budget Tracker</Link>
+        <Link to="/">
+          <img src={Logo} alt="Budget Tracker" />
+        </Link>
       </div>
       <div className="navbar-links">
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/add-expense">Add Expense</Link>
-        <Link to='/expenselist'>Expense List</Link>
+        <Link to="/dashboard" onClick={() => handleActive('Dashboard')} className={`${active === 'Dashboard' ? 'active' : ''}`}>Dashboard</Link>
+        <Link to="/add-expense" onClick={() => handleActive('addExpense')} className={`${active === 'addExpense' ? 'active' : ''}`}>Add Expense</Link>
+        <Link to='/expenselist' onClick={() => handleActive('expenseList')} className={`${active === 'expenseList' ? 'active' : ''}`}>Expense List</Link>
       </div>
       <div className="navbar-avatar">
         <Avatar onClick={handleClick} style={{ cursor: "pointer" }}>{username.charAt(0).toUpperCase()}</Avatar>

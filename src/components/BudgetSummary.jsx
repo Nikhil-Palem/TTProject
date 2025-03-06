@@ -2,7 +2,7 @@ import React from "react";
 import "./BudgetSummary.css"; // Import CSS file
 
 function BudgetSummary({ expenses }) {
-  const totalExpenses = expenses.reduce((total, exp) => total + exp.amount, 0);
+  const totalExpenses = expenses.reduce((total, exp) => total + (exp.amount*exp.Quantity), 0);
 
   return (
     <div className="budget-summary-container">

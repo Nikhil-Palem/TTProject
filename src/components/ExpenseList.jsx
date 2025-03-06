@@ -13,6 +13,7 @@ function ExpenseList({ expenses }) {
             <tr>
               <th>#</th>
               <th>Description</th>
+              <th>Quantity</th>
               <th>Amount</th>
               <th>Date</th>
             </tr>
@@ -22,7 +23,8 @@ function ExpenseList({ expenses }) {
               <tr key={index}>
                 <td>{index + 1}</td>
                 <td>{expense.title}</td>
-                <td>{expense.amount}</td>
+                <td>{expense.Quantity}</td>
+                <td>{expense.amount*expense.Quantity}</td>
                 <td>{new Date(expense.date).toLocaleDateString()}</td>
               </tr>
             ))}

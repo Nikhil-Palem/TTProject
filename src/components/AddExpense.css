@@ -1,6 +1,7 @@
 /* Container */
 .add-expense-container {
-    max-width: 400px;
+    max-width: 500px;
+    width: 100%;
     margin: 50px auto;
     padding: 20px;
     background: #fff;
@@ -25,7 +26,6 @@
   
   /* Input Fields */
   .add-expense-form input {
-    width: 100%;
     padding: 12px;
     font-size: 1rem;
     border: 1px solid #ccc;

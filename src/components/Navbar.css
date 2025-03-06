@@ -1,6 +1,6 @@
 /* Navbar Container */
 .navbar {
-    background-color: #333;
+    background-color: #131921;
     padding: 15px 20px;
     display: flex;
     align-items: center;
@@ -13,23 +13,29 @@
     display: flex;
     gap: 20px;
   }
+  .navbar-links .active{
+        color: #00bcd4;
+    border-bottom: 1px solid white;
+    font-weight: 700;
+  }
   .navbar-logo a{
     color: white;
     font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
   }
+  .navbar-logo img{
+    height: 70px;
+    filter: invert(1);
+  }
   .navbar-links a {
-    color: white;
+    color: gray;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.3s ease-in-out;
   }
   
-  .navbar-links a:hover {
-    color: #00bcd4; /* Light Blue Highlight */
-  }
   
   /* Responsive Navbar */
   @media (max-width: 600px) {

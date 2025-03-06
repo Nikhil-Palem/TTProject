@@ -16,12 +16,14 @@ function App() {
   const [expenses, setExpenses] = useState([]);
   const [username, setUsername] = useState(uName || "");
 
+  const [salary, setSalary] = useState(0);
+  const [newSalary, setNewSalary] = useState("");
   const addExpense = (expense) => {
     setExpenses([...expenses, expense]);
   };
 
   return (
-    <UserContext.Provider value={{ username, setUsername }}>
+    <UserContext.Provider value={{ username, setUsername,salary, setSalary,newSalary, setNewSalary }}>
       <Router>
         <AppContent addExpense={addExpense} expenses={expenses} />
       </Router>
@@ -43,7 +45,7 @@ function AppContent({ addExpense, expenses }) {
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard expenses={expenses} />} />
           <Route path="/add-expense" element={<AddExpense addExpense={addExpense} />} />
-          <Route path="/expenselist" element={<ExpenseList expenses={expenses}/>}></Route>
+          <Route path="/expenselist" element={<ExpenseList expenses={expenses} />}></Route>
         </Routes>
       </div>
     </div>
