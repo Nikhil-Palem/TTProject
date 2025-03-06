@@ -1,33 +1,59 @@
-/* Expense List Container */
+/* Container for the entire expense list */
 .expense-list-container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 15px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Heading */
-  .expense-list-container h3 {
-    font-size: 1.4rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 15px;
-  }
-  
-  /* No Expenses Message */
-  .no-expenses {
-    text-align: center;
-    font-size: 1rem;
-    color: #777;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 480px) {
-    .expense-list-container {
-      width: 90%;
-      padding: 12px;
-    }
-  }
-  
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Message when no expenses are available */
+.no-expenses {
+  color: gray;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+/* Styling for the expense table */
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header styling */
+.expense-table th {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+/* Table data cell styling */
+.expense-table td {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1em;
+}
+
+/* Styling for each table row when hovered */
+.expense-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Styling for rows without any data */
+.expense-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}

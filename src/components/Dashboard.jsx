@@ -1,13 +1,11 @@
 import React from "react";
 import BudgetSummary from "./BudgetSummary";
-import ExpenseList from "./ExpenseList";
-
+import SalaryUpdate from "./Salary";
 function Dashboard({ expenses }) {
   return (
     <div>
-      <h2>Budget Tracker</h2>
+      <SalaryUpdate/>
       <BudgetSummary expenses={expenses} />
-      <ExpenseList expenses={expenses} />
     </div>
   );
 }

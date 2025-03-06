@@ -24,9 +24,13 @@ function Navbar() {
 
   return (
     <nav className="navbar">
+      <div className="navbar-logo">
+        <Link to="/">Budget Tracker</Link>
+      </div>
       <div className="navbar-links">
         <Link to="/dashboard">Dashboard</Link>
         <Link to="/add-expense">Add Expense</Link>
+        <Link to='/expenselist'>Expense List</Link>
       </div>
       <div className="navbar-avatar">
         <Avatar onClick={handleClick} style={{ cursor: "pointer" }}>{username.charAt(0).toUpperCase()}</Avatar>

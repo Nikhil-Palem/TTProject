@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import "./App.css";
+import ExpenseList from "./components/ExpenseList";
 
 export const UserContext = createContext();
 
@@ -42,6 +43,7 @@ function AppContent({ addExpense, expenses }) {
           <Route path="/" element={<Home />} />
           <Route path="/dashboard" element={<Dashboard expenses={expenses} />} />
           <Route path="/add-expense" element={<AddExpense addExpense={addExpense} />} />
+          <Route path="/expenselist" element={<ExpenseList expenses={expenses}/>}></Route>
         </Routes>
       </div>
     </div>
