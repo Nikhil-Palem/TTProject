@@ -1,0 +1,13 @@
+/* Make App component take full width and height */
+.app-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure Routes container fills available space */
+.routes-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
